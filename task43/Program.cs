@@ -4,22 +4,22 @@
 Console.WriteLine("Программа по формеле y = k1 * x + b1 и y = k2 * x + b2 ");
 Console.WriteLine("Для нахождения пересечения");
 
-int[] k = new int[2];
-int[] b = new int[2];
+double[] k = new double[2];
+double[] b = new double[2];
 
 for (int i = 0; i < 2; i++)
 {
-    Console.Write($"Введите отрезки K{1 + i}: ");
+    Console.Write($"Введите отрезки k{1 + i}: ");
     k[i] = Convert.ToInt32(Console.ReadLine());
 }
 for (int i = 0; i < 2; i++)
 {
-    Console.Write($"Введите отрезки B{1 + i}: ");
+    Console.Write($"Введите отрезки b{1 + i}: ");
     b[i] = Convert.ToInt32(Console.ReadLine());
 }
-double B = b[0] - b[1];
-double K = k[1] - k[0];
+double x = (b[0] - b[1]) / (k[1] - k[0]);                 // формула x = (b1-b2)/(k2-k1)
+double y = (k[1] * b[0] - k[0] * b[1]) / (k[1] - k[0]);   //         y = (k2*b1-k1*b2)/(k2-k1)
 
-Console.WriteLine($"{K}");
-Console.WriteLine($"{B}");
-Console.WriteLine($"{B/K}");
+Console.WriteLine($"X = {x}");
+Console.WriteLine($"Y = {y}");
+
