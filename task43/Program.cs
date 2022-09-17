@@ -20,6 +20,12 @@ for (int i = 0; i < 2; i++)
 double x = (b[0] - b[1]) / (k[1] - k[0]);                 // формула x = (b1-b2)/(k2-k1)
 double y = (k[1] * b[0] - k[0] * b[1]) / (k[1] - k[0]);   //         y = (k2*b1-k1*b2)/(k2-k1)
 
-Console.WriteLine($"X = {x}");
-Console.WriteLine($"Y = {y}");
+if (k[0] == k[1])
+{
+    Console.WriteLine($"Отрезки не персекаються");
+}
+else
+{
+    Console.WriteLine($"Пересекиються точке X = {x}, Y = {y}");
+}
 
